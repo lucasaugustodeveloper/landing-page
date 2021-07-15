@@ -1,4 +1,5 @@
 import React from 'react'
+import { GetServerSideProps } from 'next'
 
 import SectionHero from 'components/SectionHero'
 import SectionAboutProject from 'components/SectionAboutProject'
@@ -13,9 +14,13 @@ import SectionFaq from 'components/SectionFaq'
 import Footer from 'components/Footer'
 import JsonSchema from 'components/JsonSchema'
 
-const Index = () => (
+import client from 'graphql/client'
+import GET_LANDING_PAGE from 'graphql/queries/getLandingPage'
+import { LandingPageProp } from 'types/api'
+
+const Index = ({ logo }: LandingPageProp) => (
   <>
-    <SectionHero />
+    <SectionHero logo={logo} />
     <SectionAboutProject />
     <SectionTech />
     <SectionConcepts />
@@ -29,5 +34,15 @@ const Index = () => (
     <JsonSchema />
   </>
 )
+
+export const getServerSideProps: GetServerSideProps = async () => {
+  const { landingPage } = await client.request(GET_LANDING_PAGE)
+
+  return {
+    props: {
+      ...landingPage
+    }
+  }
+}
 
 export default Index
