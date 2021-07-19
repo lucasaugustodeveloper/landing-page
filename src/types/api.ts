@@ -11,6 +11,13 @@ type ConceptsItem = {
   title: string
 }
 
+type ModuleItem = {
+  id: string
+  title: string
+  subtitle: string
+  description: string
+}
+
 export type LogoProps = {
   alternativeText: string
   url: string
@@ -48,10 +55,16 @@ export type SectionConceptsProps = {
   concepts: ConceptsItem[]
 }
 
+export type SectionModulesProps = {
+  title: string
+  modules: ModuleItem[]
+}
+
 export type LandingPageProps = {
   logo: LogoProps
   header: HeaderProps
   sectionAboutProject: SectionAboutProjectProps
   sectionTech: SectionTechProps
   sectionConcepts: SectionConceptsProps
+  sectionModules: SectionModulesProps
 }
