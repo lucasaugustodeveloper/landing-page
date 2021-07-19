@@ -1,5 +1,5 @@
 import React from 'react'
-import { GetStaticProps } from 'next'
+import { GetServerSideProps } from 'next'
 
 import SectionHero from 'components/SectionHero'
 import SectionAboutProject from 'components/SectionAboutProject'
@@ -35,7 +35,7 @@ const Index = ({ logo }: LandingPageProps) => (
   </>
 )
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getServerSideProps: GetServerSideProps = async () => {
   const { landingPage } = await client.request(GET_LANDING_PAGE)
 
   return {
