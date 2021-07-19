@@ -10,7 +10,13 @@ import { PricingBoxProps } from 'types/api'
 const onClick = () =>
   gaEvent({ action: 'click', category: 'buy', label: 'pricing box button' })
 
-const PricingBox = ({ benefits, button, numberInstallments, priceInstallment, totalPrice }: PricingBoxProps) => (
+const PricingBox = ({
+  benefits,
+  button,
+  numberInstallments,
+  priceInstallment,
+  totalPrice
+}: PricingBoxProps) => (
   <S.Box>
     <S.Prices>
       <S.FullPrice>
@@ -22,15 +28,13 @@ const PricingBox = ({ benefits, button, numberInstallments, priceInstallment, to
     </S.Prices>
     <S.BenefitsList dangerouslySetInnerHTML={{ __html: benefits }} />
 
-    <Button
-      href={button.url}
-      onClick={onClick}
-      withPrice
-    >
+    <Button href={button.url} onClick={onClick} withPrice>
       <p>{button.label}</p>
       <div>
         <S.ButtonFullPrice>R${totalPrice}</S.ButtonFullPrice>
-        <S.ButtonDiscountPrice>R${parseInt(numberInstallments) * parseInt(priceInstallment)}</S.ButtonDiscountPrice>
+        <S.ButtonDiscountPrice>
+          R${parseInt(numberInstallments) * parseInt(priceInstallment)}
+        </S.ButtonDiscountPrice>
       </div>
     </Button>
   </S.Box>
