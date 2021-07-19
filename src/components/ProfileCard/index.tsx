@@ -27,7 +27,7 @@ type Props = {
 const ProfileCard: React.FC<Props> = ({
   name,
   role,
-  image,
+  photo,
   socialLinks,
   description
 }) => (
