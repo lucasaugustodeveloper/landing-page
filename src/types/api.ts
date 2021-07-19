@@ -1,4 +1,4 @@
-type TechIcon = {
+export type TechIcon = {
   title: string
   image: {
     alternativeText: string
@@ -6,15 +6,31 @@ type TechIcon = {
   }
 }
 
-type ConceptsItem = {
+export type ConceptsItem = {
   id: string
   title: string
 }
 
-type ModuleItem = {
+export type ModuleItem = {
   id: string
   title: string
   subtitle: string
+  description: string
+}
+
+export type SocialLink = {
+  title: string
+  url: string
+}
+
+export type Author = {
+  name: string
+  role: string
+  photo: {
+    alternativeText: string
+    url: string
+  }
+  socialLinks: SocialLink[]
   description: string
 }
 
@@ -76,6 +92,11 @@ export type PricingBoxProps = {
   }
 }
 
+export type SectionAboutUsProps = {
+  title: string
+  authors: Author[]
+}
+
 export type LandingPageProps = {
   logo: LogoProps
   header: HeaderProps
@@ -85,4 +106,5 @@ export type LandingPageProps = {
   sectionModules: SectionModulesProps
   sectionAgenda: SectionAgendaProps
   pricingBox: PricingBoxProps
+  sectionAboutUs: SectionAboutUsProps
 }
