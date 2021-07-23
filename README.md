@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c0666759-f554-4d5b-8efb-cf4618e78be7/deploy-status)](https://app.netlify.com/sites/laugusto-landin-page/deploys)
+
 # Simple NextJS Quick Start
 
 A simple project starter to work with React, NextJS and Styled Components
