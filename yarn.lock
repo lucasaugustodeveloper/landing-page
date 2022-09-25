@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+"@adobe/css-tools@^4.0.1":
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/@adobe/css-tools/-/css-tools-4.0.1.tgz#b38b444ad3aa5fedbb15f2f746dcd934226a12dd"
+  integrity sha512-+u76oB43nOHrF4DDWRLWDCtci7f3QJoEBigemIdIeTi1ODqjx6Tad9NCVnPRwewWlKkVab5PlK8DCtPTyX7S8g==
+
 "@babel/code-frame@7.12.11":
   version "7.12.11"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.12.11.tgz#f4ad435aa263db935b8f10f2c552d23fb716a63f"
@@ -2176,15 +2181,6 @@ css.escape@1.5.1:
   version "1.5.1"
   resolved "https://registry.yarnpkg.com/css.escape/-/css.escape-1.5.1.tgz#42e27d4fa04ae32f931a4b4d4191fa9cddee97cb"
   integrity sha1-QuJ9T6BK4y+TGktNQZH6nN3ul8s=
-
-css@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/css/-/css-3.0.0.tgz#4447a4d58fdd03367c516ca9f64ae365cee4aa5d"
-  integrity sha512-DG9pFfwOrzc+hawpmqX/dHYHJG+Bsdb0klhyi1sDneOgGOXy9wQIC8hzyVp1e4NRYDBdxcylvywPkkXCHAzTyQ==
-  dependencies:
-    inherits "^2.0.4"
-    source-map "^0.6.1"
-    source-map-resolve "^0.6.0"
 
 cssnano-preset-simple@^3.0.0:
   version "3.0.0"
@@ -4737,12 +4733,12 @@ jest-snapshot@^27.3.1:
     pretty-format "^27.3.1"
     semver "^7.3.2"
 
-jest-styled-components@^7.0.6:
-  version "7.0.6"
-  resolved "https://registry.yarnpkg.com/jest-styled-components/-/jest-styled-components-7.0.6.tgz#f30a39f778f50b2619636523abee6e4fd50d5654"
-  integrity sha512-asCitkJfaO1TX60nbIBXDUglblDFvKl9aKA5IV09AmO2zL6DC89MgrK73/e7zXzMOpzyVmuXQLLYlsDUSYIb7g==
+jest-styled-components@7.1.1:
+  version "7.1.1"
+  resolved "https://registry.yarnpkg.com/jest-styled-components/-/jest-styled-components-7.1.1.tgz#faf19c733e0de4bbef1f9151955b99e839b7df48"
+  integrity sha512-OUq31R5CivBF8oy81dnegNQrRW13TugMol/Dz6ZnFfEyo03exLASod7YGwyHGuayYlKmCstPtz0RQ1+NrAbIIA==
   dependencies:
-    css "^3.0.0"
+    "@adobe/css-tools" "^4.0.1"
 
 jest-util@^27.3.1:
   version "27.3.1"
@@ -6656,14 +6652,6 @@ source-map-resolve@^0.5.0:
     resolve-url "^0.2.1"
     source-map-url "^0.4.0"
     urix "^0.1.0"
-
-source-map-resolve@^0.6.0:
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/source-map-resolve/-/source-map-resolve-0.6.0.tgz#3d9df87e236b53f16d01e58150fc7711138e5ed2"
-  integrity sha512-KXBr9d/fO/bWo97NXsPIAW1bFSBOuCnjbNTBMO7N59hsv5i9yzRDfcYwwt0l04+VqnKC+EwzvJZIP/qkuMgR/w==
-  dependencies:
-    atob "^2.1.2"
-    decode-uri-component "^0.2.0"
 
 source-map-support@^0.5.6:
   version "0.5.20"
